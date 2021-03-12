@@ -16,50 +16,93 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+/* Contains all of the buttons. In order to match the styling of the design file, "Contact" had to be off the flex-end 
+but the lambda photo had to be at the flex-start.  */
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    align-items: flex-end;
+}
+/* Contains both nav and the lambda-black image. Causes them to be inline with one another */
+#top-nav {
+    display: flex;
+    margin: 1rem 0;
+}
+
+nav button {
+    font-family: "Roboto", sans-serif;
+    border: 0;
+    background-color: white;
+}
+
+#jumbo-img {
+    margin: 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-size: 18px;
     margin-bottom: 15px;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
 }
 
 p {
@@ -82,7 +125,7 @@ p {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
 }
 
 .middle-content {
@@ -143,4 +186,43 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+#about {
+    padding: 0 1rem 1rem 1rem;
+    border-bottom: 1px dashed black;
+}
+
+/* Contains an img, h2, paragraph, and button. Uses flex wrap so we can have 2x2 within the designated 800px width.*/
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-section {
+    width: 46%;
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+.about-section h2,
+.about-section p,
+.about-section button {
+    margin: 0.5em 0;
+}
+
+.about-section button {
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    width: 6rem;
+    background-color: white;
+}
+
+#places-we-work,
+#collaboration {
+    padding: 0 0 1em 0;
+    border-bottom: 1px dashed black;
+}
+
+#work-together-section {
+    margin: 1rem 1rem 2rem 1rem;
 }
